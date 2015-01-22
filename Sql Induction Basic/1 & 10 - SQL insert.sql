@@ -18,5 +18,4 @@ insert into employee values ('Rajat', 'Kumar', 28, 'Tech Lead', 48000, 4, 1);
 insert into employee values ('Ramesh', 'Raj', 38, 'Tech Lead', 42000, 1,  1);
 insert into employee values ('Naveen', 'Singh', 22, 'Trainee', 12000, 1, 1);
 insert into employee values ('Ashish', 'Lamba', 22, 'Trainee', 12000, 2, null);
-
- 
+insert into employee values('Akash',NULL,24,'HR',58000,4,4);
