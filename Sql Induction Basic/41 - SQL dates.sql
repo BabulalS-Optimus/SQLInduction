@@ -1,8 +1,6 @@
 
- select FORMAT(getdate(),  'ddd dd\t\h MMM yyyy hh:mm:ss tt') as date_ ;
- 
- select FORMAT(DATEDIFF(day, '1970/01/01 00:00:00', getdate()),  'ddd dd\t\h MMM yyyy hh:mm:ss tt') as date_ ;
- 
- SELECT convert(varchar(24), DATEDIFF(day, '1970/01/01 00:00:00', getdate()) ,113);
+select FORMAT(getdate(),  'ddd dd\t\h MMM yyyy hh:mm:ss tt') as date_ ;
+
+select DATEDIFF(SECOND, '1970/01/01', '2010/01/01' ) as UNIXTimeStamp, '1st Jan 2010' as ActualDate;
 
 select FORMAT(dateadd(day, 2,getdate()),  'ddd dd\t\h MMM yyyy hh:mm:ss tt') as date_ ;
