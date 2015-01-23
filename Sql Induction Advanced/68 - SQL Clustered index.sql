@@ -1,14 +1,14 @@
+-- to use the SQLInduction DataBase.
 use SqlInduction;
 
-alter table employee drop constraint pk_PersonID;
+--Run this query if there is PRIMARY KEY with pk_PersonID name on Employee table.
+alter table Employee drop constraint pk_PersonID;
 
+--Run this query to create the Clustered Index on Employee table.
+create clustered  index CLIndexEmployee on Employee(id);
 
-if exists ( select name from sys.indexes where name=N'pk_PersonID')
-drop index pk_PersonID on employee;
+--Run this query to drop the Clustered Index with name as CLIndexEmployee on Employee table.
+drop index CLIndexEmployee on Employee;
 
-
-create clustered  index CLIndexEmployee on employee(id);
-
-drop index CLIndexEmployee on employee;
-
-alter table employee add constraint pk_PersonID PRIMARY KEY (id);
+--Run this query to add back the PRIMARY KEY removed in the first query of this SCRIPT.
+alter table Employee add constraint pk_PersonID PRIMARY KEY (id);
