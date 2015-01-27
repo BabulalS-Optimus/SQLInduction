@@ -1,5 +1,7 @@
-﻿use SQlInduction;
+﻿-- run this query to use the database i.e. SQLInduction
+use SqlInduction;
 
+--to create [t_emp] table
 CREATE TABLE [dbo].[t_emp] (
     [Emp_id]     NUMERIC (18) IDENTITY (1001, 2) NOT NULL,
     [Emp_Code]   VARCHAR (50) NULL,
@@ -12,12 +14,14 @@ CREATE TABLE [dbo].[t_emp] (
     CHECK (datediff(year,[Emp_DOB],getdate())>=(18))
 );
 
+--to create [t_activity] table
 CREATE TABLE [dbo].[t_activity] (
     [Activity_id]          NUMERIC (18) IDENTITY (1, 1) NOT NULL,
     [Activity_description] VARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([Activity_id] ASC)
 );
 
+--to create [t_atten_det] table
 CREATE TABLE [dbo].[t_atten_det] (
     [Atten_id]             NUMERIC (18) IDENTITY (1001, 1) NOT NULL,
     [Emp_id]               NUMERIC (18) NULL,
@@ -29,7 +33,7 @@ CREATE TABLE [dbo].[t_atten_det] (
     FOREIGN KEY ([Activity_id]) REFERENCES [dbo].[t_activity] ([Activity_id])
 );
 
-
+--to create [t_salary] table
 CREATE TABLE [dbo].[t_salary] (
     [Salary_id]    NUMERIC (18)    IDENTITY (1001, 1) NOT NULL,
     [Emp_id]       NUMERIC (18)    NULL,

@@ -50,5 +50,3 @@ select * from t_user_master;
 select * from t_product_master;
 select * from t_transaction;
 
-
---Run this query to see the required output of the Assignment-I.
